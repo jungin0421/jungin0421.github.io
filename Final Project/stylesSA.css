@@ -1,0 +1,269 @@
+html,
+body {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Playfair Display', Serif;
+}
+
+
+html,
+body {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Playfair Display', Serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    margin: 0 auto;
+    width: 100%;
+
+    grid-template-rows: [header-start] 20vh [header-end menu-start] 10vh [menu-end main-start] 100vh [main-end footer-start] 50vh[footer-end];
+}
+
+header {
+    grid-row: header-start / header-end;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.menubar {
+    width: 100%;
+    background: #c1dff0;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+    grid-row: menu-start / menu-end;
+}
+
+.menubar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    color: white;
+}
+
+.menubar ul li {
+    display: inline-block;
+    width: 20%;
+    padding: 15px 15px;
+    cursor: pointer;
+
+    position: relative;
+}
+
+.menubar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+
+.menubar li:hover a {
+    color: white;
+}
+
+.menubar li:hover ul li a {
+    color: black;
+}
+
+.menubar ul ul {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    display: block;
+
+}
+
+.menubar ul ul li {
+    float: none;
+    background: #c1dff0;
+    width: 100%;
+
+
+}
+
+.menubar li:hover ul {
+    visibility: visible;
+    z-index: 100;
+}
+
+.menubar ul ul li:hover {
+    background: #8fa6cb;
+
+}
+
+.menubar ul ul li:hover a {
+    color: white;
+}
+
+
+
+.title {
+    font-size: 40px;
+    color: white;
+
+
+}
+
+header {
+    background: #f69a94;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: white;
+    font-style: italic;
+}
+
+
+
+footer {
+    grid-row: footer-start / footer-end;
+    background: #f69a94;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.box {
+    color: white;
+    text-align: left;
+    padding: 1em;
+    font-size: 10px;
+}
+
+#submit {
+    background: white;
+    color: #f69a94;
+    border-radius: 50px;
+    margin: 0 5em;
+
+}
+
+#submit:hover {
+    background: #bfd5e2;
+    color: white;
+}
+
+.button {
+    text-align: center;
+    background: white;
+    color: #f69a94;
+    text-decoration: none;
+    margin: 5em;
+    padding: .5em;
+    border-radius: 50px;
+
+}
+
+.button:hover {
+    background: #bfd5e2;
+    color: white;
+}
+
+#logo {
+    width: 20vh;
+    height: 20vh;
+    float: right;
+    vertical-align: top;
+}
+
+
+main {
+    grid-row: main-start / main-end;
+
+    padding: 40px 15px 30px 15px;
+
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    justify-items: center;
+
+    overflow: hidden;
+}
+
+.store {
+
+    border-style: solid;
+    border-width: 5px;
+    width: 50vh;
+    height: 40vh;
+}
+
+.one {
+    border-color: #f69a94;
+}
+
+.two {
+    border-color: #c1dff0;
+}
+
+.three {
+    border-color: #f6c6ad;
+}
+
+.four {
+    border-color: #8fa6cb;
+}
+
+.five {
+    border-color: #edafb8;
+}
+
+.six {
+    border-color: #bfd5e2;
+}
+
+@media only screen and (max-width: 820px) {
+
+    .menubar ul li a {
+        font-size: 16px;
+    }
+
+    .menubar ul li {
+        padding: 0;
+
+    }
+
+    .center {
+        font-size: 20px;
+    }
+
+    .container {
+
+        grid-template-rows: [header-start] 20vh [header-end menu-start] 10vh [menu-end main-start] 100vh [main-end footer-start] 100vh[footer-end];
+    }
+
+    main {
+        padding: 40px 15px 30px 15px;
+
+        grid-gap: 15px;
+        grid-template-columns: repeat(1, 1fr);
+        /* It seems that the layout did 8,
+        but my grid-gap is all messed when I do 8 */
+        grid-template-rows: repeat(5, 1fr);
+
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+
+}
