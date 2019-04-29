@@ -262,7 +262,7 @@ main {
 }
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 479px) {
 
     .menubar ul li a {
         font-size: 16px;
@@ -295,11 +295,11 @@ main {
     }
 
     .title {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .subtitle {
-        font-size: 20px;
+        font-size: 15px;
     }
 
 
