@@ -225,7 +225,7 @@ main {
     border-color: #bfd5e2;
 }
 
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 820px) {
 
     .menubar ul li a {
         font-size: 16px;
@@ -262,7 +262,7 @@ main {
     }
 
     .subtitle {
-        font-size: 10px;
+        font-size: 15px;
     }
 
 
